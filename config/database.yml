@@ -1,0 +1,16 @@
+development:
+  adapter:    postgresql
+  host:       localhost
+  database:   pso_development
+  timeout:    5000
+  encoding:   utf8
+  pool:       5
+  reconnect:  true
+
+test:
+  adapter:    postgresql
+  host:       localhost
+  database:   pso_test
+  timeout:    5000
+  encoding:   utf8
+  pool:       5

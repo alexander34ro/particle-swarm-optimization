@@ -1,0 +1,32 @@
+.p-5
+  .row
+    .col-lg-12.px-3
+      .btn.btn-dark.float-right.my-3#start-function Find function minimum
+      %h1 Particle Swarm Optimization
+      %h5.subtitle Find the global minimum using a swarm of organized particles. (index represented as binary numbers)
+      .somthing.py-4
+        .input-group
+          .input-group-prepend
+            .input-group-text Generations
+          = number_field_tag :generations, value = 20, min: 2, max: 100, class: "form-control"
+          .input-group-prepend
+            .input-group-text Population Size
+          = number_field_tag :population_size, value = 10, min: 2, max: 100, class: "form-control"
+          .input-group-prepend
+            .input-group-text Momentum Factor
+          = number_field_tag :momentum_factor, value = 2, min: 0, max: 6, class: "form-control"
+          .input-group-prepend
+            .input-group-text Cognitive Factor
+          = number_field_tag :cognitive_factor, value = 2.6, min: 0, max: 4, class: "form-control"
+          .input-group-prepend
+            .input-group-text Social Factor
+          = number_field_tag :social_factor, value = 1.2, min: 0, max: 4, class: "form-control"
+      %p Input data goes here:
+      = text_area_tag :input_data, "", rows: 5, class: "form-control"
+      .btn.btn-dark.float-right.my-3#start Find minimum
+      %h6.mt-5
+        Minimum:
+      %canvas#minimum-chart{ width: 1272, height: 240 }
+      %h6
+        Best particle:
+      %canvas#best-chart{ width: 1272, height: 240 }            
